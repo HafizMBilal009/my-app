@@ -10,7 +10,7 @@ function AddQuoteForm(props) {
     setAuthor('');
   };
   return (
-    <div>
+    <div className='add-quote-form'>
       <div>
         <label>Quote</label>
         <input

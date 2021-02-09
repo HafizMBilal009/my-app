@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import AddQuoteForm from './components/AddQuoteForm';
 import { data } from './components/Data';
 import QoutesTable from './components/QoutesTable';
+import './App.css';
 function App() {
   const [quotesList, setQuotesList] = useState(data);
   const addQuote = (quote, author) => {

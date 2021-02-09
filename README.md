@@ -42,7 +42,7 @@ One component pass a value to the other one and other component use this value i
 
 State is the heart of a React app. Basically, state is used to store data which is required in our React component. Using state, changes in data can be seen in real-time without refreshing webpage.
 
-## Enough talk, let's code now :
+## Enough talk, let's code now
 
 We will build a simple React app which shows a list of quotes with their authors. We can add a quote and see live update in quotes table.
 
@@ -70,6 +70,7 @@ import React, { useState } from 'react';
 import AddQuoteForm from './components/AddQuoteForm';
 import { data } from './components/Data';
 import QoutesTable from './components/QoutesTable';
+import './App.css';
 function App() {
   const [quotesList, setQuotesList] = useState(data);
   const addQuote = (quote, author) => {
@@ -86,6 +87,8 @@ function App() {
 
 export default App;
 ```
+
+`App.js` returns a div containting two React components. Let's create these components.
 
 Inside `src` directory, create a folder `components`. Inside it, create a file named `QuotesTable.js` and write this code :
 
@@ -114,6 +117,8 @@ function QoutesTable(props) {
 export default QoutesTable;
 ```
 
+This component will render quotes table. `map` function itrerates each element of `quotesList` array and returns a `tr` containing quote and its author.
+
 Residing in components directory, create a file named `Data.js` and add some dummy data in it :
 
 ```javascript
@@ -130,7 +135,7 @@ export const data = [
   },
   {
     quote: 'The first draft is just you telling yourself the story.',
-    author: 'erry Pratchett',
+    author: 'Terry Pratchett',
   },
 ];
 ```
@@ -150,7 +155,7 @@ function AddQuoteForm(props) {
     setAuthor('');
   };
   return (
-    <div>
+    <div className='add-quote-form'>
       <div>
         <label>Quote</label>
         <input
@@ -174,8 +179,40 @@ function AddQuoteForm(props) {
 export default AddQuoteForm;
 ```
 
-Now, add a quote with author by input fields and you can see live updates in quotes table.
+This componnet will create a form to take quote and author as inputs and on button click, quote will be appended to quotes table. This update will be real-time.
 
-This is beauty of React!
+This is the beauty of React!
+
+Remove everything from `App.css` and add following code for better representation.
+
+```css
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 1rem;
+}
+table {
+  border-spacing: 5px;
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 1rem;
+}
+.add-quote-form {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 1.5rem;
+}
+.add-quote-form input {
+  width: 100%;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  height: 1.5rem;
+}
+```
 
 You can get this code on [Github](https://github.com/HafizMBilal009/my-app.git)

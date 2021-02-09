@@ -11,6 +11,6 @@ export const data = [
   },
   {
     quote: 'The first draft is just you telling yourself the story.',
-    author: 'erry Pratchett',
+    author: 'Terry Pratchett',
   },
 ];
