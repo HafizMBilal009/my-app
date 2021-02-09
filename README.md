@@ -9,7 +9,7 @@ Basic knowledge of :
 - HTML
 - Javascript
 
-## Why React ?
+## Why React?
 
 React is introduced by Facebook in 2013. Due to its readable syntax & code reusability, It has become one of the most popular & most used libararies for front-end development.
 React has a very strong community on internet world so mostly issues during development are solved quickly.
@@ -42,7 +42,7 @@ One component pass a value to the other one and other component use this value i
 
 State is the heart of a React app. Basically, state is used to store data which is required in our React component. Using state, changes in data can be seen in real-time without refreshing webpage.
 
-## Enough talk, let's code now
+## Enough Talk, Let's Code
 
 We will build a simple React app which shows a list of quotes with their authors. We can add a quote and see live update in quotes table.
 
@@ -52,7 +52,7 @@ Let's start by creating a simple React app by running this command :
 yarn create react-app my-app
 ```
 
-This creates an React app named my-app with a built-in folder structure. In project folder, run :
+This creates a React app named my-app with a built-in folder structure. In project folder, run :
 
 ```bash
 yarn start
@@ -90,7 +90,7 @@ export default App;
 
 `App.js` returns a div containting two React components. Let's create these components.
 
-Inside `src` directory, create a folder `components`. Inside it, create a file named `QuotesTable.js` and write this code :
+Inside `src` directory, create a folder `components`. Inside it, create a file named `QuotesTable.js` and add following code:
 
 ```javascript
 import React from 'react';
